@@ -11,7 +11,7 @@ export default function Card(props) {
                 <span className="gray">{props.country}</span>
 
             </div>
-            <p>Life Lessons with {props.name}</p>
+            <p>{props.title}</p>
             <p><span className="bold">From ${props.price}</span> / person</p>
         </div>
     )
