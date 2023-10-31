@@ -4,11 +4,11 @@ import Card from "./components/Card";
 import React from 'react';
 import './style.css';
 import data from "./components/data";
-console.log("datadata",data);
 
 export default function App() {
     const cards = data.map(item => {
         return<Card
+            key={item.id}
             img={item.coverImg}
             rating={item.stats.rating}
             reviewCount={item.stats.reviewCount}
@@ -17,12 +17,14 @@ export default function App() {
             price={item.price}
         />
     })
-    console.log("jokeElements", cards)
+
     return (
         <div className="container">
             <Navbar/>
             <Hero/>
-            {cards}
+            <section className="flex flex-nowrap overflow-x-auto gap-20">
+                {cards}
+            </section>
 
         </div>
     )
